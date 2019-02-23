@@ -1,5 +1,4 @@
 const express = require('express')
-const request = require('request')
 const hltb = require('howlongtobeat');
 const hltbService = new hltb.HowLongToBeatService();
 const app = express()
