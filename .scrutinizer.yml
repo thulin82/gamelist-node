@@ -8,3 +8,6 @@ build:
                 override:
                     - js-scrutinizer-run
                     - eslint-run
+                    coverage:
+                        file: coverage/clover.xml
+                        format: clover
