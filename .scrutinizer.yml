@@ -8,9 +8,9 @@ build:
                 override:
                     - js-scrutinizer-run
                     - eslint-run
-        coverage:
-            tests:
-                override:
-                    coverage:
-                        file: coverage/clover.xml
-                        format: clover
+        # coverage:
+        #     tests:
+        #         override:
+        #             coverage:
+        #                 file: coverage/clover.xml
+        #                 format: clover
