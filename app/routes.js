@@ -4,6 +4,9 @@ const hltb = require('howlongtobeat');
 const hltbService = new hltb.HowLongToBeatService();
 
 router.get('/', (req, res) => res.send('Hello World!'))
+router.post('/', (req, res) => res.status(204).send())
+router.put('/', (req, res) => res.status(204).send())
+router.delete('/', (req, res) => res.status(204).send())
 
 router.get('/search/:name', (req, res) => {
     hltbService.search(req.params.name).then(result => {
