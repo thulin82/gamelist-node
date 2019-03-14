@@ -1,6 +1,8 @@
 var testCase = require('mocha').describe;
 var it = require('mocha').it;
 var expect = require('chai').expect;
+// eslint-disable-next-line no-unused-vars
+var should = require('chai').should();
 
 testCase('Bools', function() {
     it('should return true', function() {
