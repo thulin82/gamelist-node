@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "production": "NODE_ENV='production' node index.js",
-    "test": "nyc --reporter=clover mocha --recursive tests",
-    "testing": "mocha --recursive tests"
+    "test": "nyc --reporter=clover mocha --exit --recursive tests"
   },
   "repository": {
     "type": "git",
@@ -17,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "eslint": "^5.15.1",
     "express": "^4.16.4",
     "howlongtobeat": "^1.1.1",
