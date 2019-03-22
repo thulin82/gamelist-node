@@ -42,4 +42,20 @@ testCase('Routes', () => {
                 done();
             });
     });
+    it('GET /search should return json', (done) => {
+        server.get('/search/Bloodborne')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('application/json');
+                done();
+            });
+    });
+    it('GET /id should return json', (done) => {
+        server.get('/id/23453')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('application/json');
+                done();
+            });
+    });
 });
