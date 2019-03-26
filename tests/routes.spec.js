@@ -14,7 +14,7 @@ testCase('Routes', () => {
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('text/html');
-                expect(res.text).to.eql('Hello World!')
+                expect(res.text).to.eql('Hello World!');
                 done();
             });
     });

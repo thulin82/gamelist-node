@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 4567;
 const routes = require('./routes');
@@ -28,6 +29,7 @@ function logStartUpDetailsToConsole() {
     console.info(routes);
 }
 
+app.use(cors());
 app.use(middleware.logIncomingToConsole);
 app.use('', routes);
 app.listen(port, logStartUpDetailsToConsole);
