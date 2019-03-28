@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var basicController = require('./controllers/basicController.js');
 var hltb = require('howlongtobeat');
 var hltbService = new hltb.HowLongToBeatService();
 
-router.get('/', (req, res) => res.send('Hello World!'));
+router.get('/', basicController.get);
 router.post('/', (req, res) => res.status(204).send());
 router.put('/', (req, res) => res.status(204).send());
 router.delete('/', (req, res) => res.status(204).send());
