@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var basicController = require('./controllers/basicController.js');
-var idController = require('./controllers/idController.js');
-var searchController = require('./controllers/searchController.js');
+var basicController = require('./controllers/BasicController');
+var idController = require('./controllers/IdController');
+var searchController = require('./controllers/SearchController');
 
 router.get('/', basicController.get);
 router.post('/', basicController.post);
