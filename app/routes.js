@@ -9,7 +9,8 @@ router.post('/', basicController.post);
 router.put('/', basicController.put);
 router.delete('/', basicController.delete);
 
-router.get('/search/:name', searchController.get);
+router.get('/search/:name', searchController.search);
+router.get('/one/:title', searchController.one);
 router.get('/id/:nr', idController.get);
 
 module.exports = router;

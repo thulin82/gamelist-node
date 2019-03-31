@@ -58,4 +58,12 @@ testCase('Routes', () => {
                 done();
             });
     });
+    it('GET /one should return json', (done) => {
+        server.get('/one/Bloodborne')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('application/json');
+                done();
+            });
+    });
 });
