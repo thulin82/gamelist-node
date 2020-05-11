@@ -1,6 +1,12 @@
 language: node_js
 sudo: true
 node_js:
+  - "14"
+  - "13"
+  - "12"
+  - "11"
+  - "10"
+  - "9"
   - "8"
   - "node"
 install:
