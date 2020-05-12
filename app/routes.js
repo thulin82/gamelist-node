@@ -15,9 +15,9 @@ router.get('/one/:title', searchController.one);
 
 router.get('/id/:nr', idController.get);
 
-router.get('/id/:nr', dbController.get);
+router.get('/db/:nr', dbController.get);
 //router.post('/', dbController.post);
 //router.put('/', dbController.put);
-router.delete('/id/:nr', dbController.delete);
+router.delete('/db/:nr', dbController.delete);
 
 module.exports = router;

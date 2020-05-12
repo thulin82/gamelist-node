@@ -66,4 +66,21 @@ testCase('Routes', () => {
                 done();
             });
     });
+    it('GET /db should return html', (done) => {
+        server.get('/db/1234')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('text/html');
+                expect(res.text).to.eql('Hello World!');
+                done();
+            });
+    });
+    it('DELETE /db should return 204', (done) => {
+        server.delete('/db/1234')
+            .send("data", "data")
+            .end((err, res) => {
+                expect(res).to.have.status(204);
+                done();
+            });
+    });
 });

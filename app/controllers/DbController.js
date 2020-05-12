@@ -2,12 +2,12 @@ class DbController {
     get(req, res) {
         res.send('Hello World!');
     }
-    post(req, res) {
-        res.status(204).send();
-    }
-    put(req, res) {
-        res.status(204).send();
-    }
+    // post(req, res) {
+    //     res.status(204).send();
+    // }
+    // put(req, res) {
+    //     res.status(204).send();
+    // }
     delete(req, res) {
         res.status(204).send();
     }
