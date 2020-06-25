@@ -3,19 +3,23 @@ const dotenv = require('dotenv');
 // eslint-disable-next-line no-unused-vars
 const colors = require('colors');
 const cors = require('cors');
-const routes = require('./routes');
 const connectDB = require('./config/db');
 
 dotenv.config({ path: './config/config.env' });
 
 connectDB();
 
+const games = require('./routes/games');
+const db = require('./routes/db');
+
 const app = express();
+
 app.use(cors());
 app.use(express.json());
-app.use('', routes);
+app.use('/api/v1/games', games);
+app.use('/api/v1/db', db);
 
-const PORT = process.env.PORT || 8888;
+const PORT = process.env.PORT || 4567;
 
 app.listen(
     PORT,

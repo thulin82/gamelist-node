@@ -10,17 +10,16 @@ searchGame.addEventListener('focusout', (e) => {
 
     if (gameTitle !== '') {
         console.log(gameTitle);
-        hltb.getGame(gameTitle)
-            .then(data => {
-                console.log(data);
-                if (data.json.message === 'Not Found') {
-                    //Take care of errors
-                } else {
-                    //Show data
-                    console.log(data.json.name);
-                    ui.populate(data.json);
-                }
-            });
+        hltb.getGame(gameTitle).then((data) => {
+            console.log(data);
+            if (data.json.message === 'Not Found') {
+                //Take care of errors
+            } else {
+                //Show data
+                console.log(data.json.data.name);
+                ui.populate(data.json.data);
+            }
+        });
     } else {
         //Clear JSON Data
         ui.clearJson();
