@@ -1,28 +1,33 @@
 {
-  "name": "gamelist",
-  "version": "1.0.0",
-  "description": "Using howtolongtobeat.com together with gamelist from psn",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "production": "NODE_ENV='production' node index.js",
-    "test": "nyc --reporter=clover mocha --exit --recursive tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:thulin82/gamelist.git"
-  },
-  "author": "thulin82",
-  "license": "MIT",
-  "dependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "cors": "^2.8.5",
-    "eslint": "^5.15.1",
-    "express": "^4.17.0",
-    "howlongtobeat": "^1.2.0",
-    "mocha": "^6.0.1",
-    "nyc": "^14.1.0",
-    "mongoose": "^5.9.13"
-  }
+    "name": "gamelist",
+    "version": "1.0.0",
+    "description": "Using howtolongtobeat.com together with gamelist from psn",
+    "main": "app/index.js",
+    "scripts": {
+        "start": "NODE_ENV=production node server",
+        "dev": "npx nodemon server",
+        "test": "nyc --reporter=clover mocha --exit --recursive tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:thulin82/gamelist.git"
+    },
+    "author": "thulin82",
+    "license": "MIT",
+    "dependencies": {
+        "chai": "^4.2.0",
+        "chai-http": "^4.3.0",
+        "colors": "^1.4.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.0",
+        "howlongtobeat": "^1.2.0",
+        "mocha": "^6.0.1",
+        "mongoose": "^5.9.13",
+        "nyc": "^14.1.0"
+    },
+    "devDependencies": {
+        "eslint": "^5.16.0",
+        "nodemon": "^2.0.4"
+    }
 }
