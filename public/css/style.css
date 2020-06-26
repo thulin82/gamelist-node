@@ -3,4 +3,7 @@
     font-family: monospace;
     white-space: pre;
     margin: 1em 0;
-  }
+}
+#buttons {
+    display: none;
+}

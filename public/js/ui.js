@@ -3,25 +3,22 @@ class UI {
     constructor() {
         this.json = document.getElementById('jsonData');
         this.buttons = document.getElementById('buttons');
+        this.searchGame = document.getElementById('searchGame');
     }
 
     populate(json) {
         this.json.innerHTML = JSON.stringify(json, null, 4);
-        this.buttons.innerHTML = `
-        <div class="row">
-            <div class="col-md-6 mx-auto text-center bg-light">
-                <h3>Save to db?</h3>
-                <button type="button" id="yesButton" class="btn btn-success m-2">
-                YES</button>
-                <button type="button" id="noButton" class="btn btn-danger m-2">
-                NO</button>
-            </div>
-        </div>
-        `;
+        this.buttons.style.display = 'block';
     }
 
     clearJson() {
         this.json.innerHTML = '';
-        this.buttons.innerHTML = '';
+        this.buttons.style.display = 'none';
+    }
+
+    clearAll() {
+        this.json.innerHTML = '';
+        this.buttons.style.display = 'none';
+        this.searchGame.value = '';
     }
 }
