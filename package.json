@@ -23,11 +23,11 @@
         "express": "^4.17.0",
         "howlongtobeat": "^1.2.0",
         "mocha": "^6.0.1",
-        "mongoose": "^5.9.13",
+        "mongoose": "^5.10.0",
         "nyc": "^15.1.0"
     },
     "devDependencies": {
-        "eslint": "^7.5.0",
+        "eslint": "^7.10.0",
         "nodemon": "^2.0.4"
     }
 }
