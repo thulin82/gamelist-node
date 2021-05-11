@@ -9,77 +9,27 @@ var should = require('chai').should();
 testCase('Routes', () => {
     after(() => server.close());
 
-    it('GET / should return html', (done) => {
-        server.get('/')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res.type).to.eql('text/html');
-                expect(res.text).to.eql('Hello World!');
-                done();
-            });
-    });
-    it('PUT / should return 204', (done) => {
-        server.put('/')
-            .send("data", "data")
-            .end((err, res) => {
-                expect(res).to.have.status(204);
-                done();
-            });
-    });
-    it('POST / should return 204', (done) => {
-        server.post('/')
-            .send("data", "data")
-            .end((err, res) => {
-                expect(res).to.have.status(204);
-                done();
-            });
-    });
-    it('DELETE / should return 204', (done) => {
-        server.delete('/')
-            .send("data", "data")
-            .end((err, res) => {
-                expect(res).to.have.status(204);
-                done();
-            });
-    });
-    it('GET /search should return json', (done) => {
-        server.get('/search/Bloodborne')
+    it('GET /games/:id should return json', (done) => {
+        server.get('/api/v1/games/21262')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('application/json');
                 done();
             });
     });
-    it('GET /id should return json', (done) => {
-        server.get('/id/23453')
+    it('GET /games/find/bloodborne should return json', (done) => {
+        server.get('/api/v1/games/find/bloodborne')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('application/json');
                 done();
             });
     });
-    it('GET /one should return json', (done) => {
-        server.get('/one/Bloodborne')
+    it('GET /games/findone/bloodborne should return json', (done) => {
+        server.get('/api/v1/games/findone/bloodborne')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('application/json');
-                done();
-            });
-    });
-    it('GET /db should return html', (done) => {
-        server.get('/db/1234')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res.type).to.eql('text/html');
-                expect(res.text).to.eql('Hello World!');
-                done();
-            });
-    });
-    it('DELETE /db should return 204', (done) => {
-        server.delete('/db/1234')
-            .send("data", "data")
-            .end((err, res) => {
-                expect(res).to.have.status(204);
                 done();
             });
     });
