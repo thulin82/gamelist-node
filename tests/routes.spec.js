@@ -17,7 +17,7 @@ testCase('Routes', () => {
                 done();
             });
     });
-    it('GET /games/find/bloodborne should return json', (done) => {
+    it('GET /games/find/:name should return json', (done) => {
         server.get('/api/v1/games/find/bloodborne')
             .end((err, res) => {
                 expect(res).to.have.status(200);
@@ -25,8 +25,24 @@ testCase('Routes', () => {
                 done();
             });
     });
-    it('GET /games/findone/bloodborne should return json', (done) => {
+    it('GET /games/findone/:name should return json', (done) => {
         server.get('/api/v1/games/findone/bloodborne')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('application/json');
+                done();
+            });
+    });
+    it('GET /db/ should return json', (done) => {
+        server.get('/api/v1/db/')
+            .end((err, res) => {
+                expect(res).to.have.status(200);
+                expect(res.type).to.eql('application/json');
+                done();
+            });
+    });
+    it('GET /db/:id should return json', (done) => {
+        server.get('/api/v1/db/5ef4b79829c14e1d40c8384b')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('application/json');
