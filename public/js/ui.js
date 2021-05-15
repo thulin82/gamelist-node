@@ -21,4 +21,9 @@ class UI {
         this.buttons.style.display = 'none';
         this.searchGame.value = '';
     }
+
+    //Add method for informing user that the information was added to the db
+    userPopup(msg) {
+        console.info(msg);
+    }
 }

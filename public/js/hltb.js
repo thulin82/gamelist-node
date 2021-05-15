@@ -12,4 +12,14 @@ class HLTB {
             json
         };
     }
+
+    async getDetails(id) {
+        const detailsResponse = await fetch(`http://localhost:4567/api/v1/games/${id}`);
+
+        const json = await detailsResponse.json();
+
+        return {
+            json
+        };
+    }
 }
