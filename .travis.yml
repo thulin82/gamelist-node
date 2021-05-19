@@ -1,11 +1,10 @@
 language: node_js
 sudo: true
 node_js:
-  - "14"
-  - "13"
-  - "12"
-  - "node"
+    - '14'
+    - '12'
+    - 'node'
 install:
-  - npm install
+    - npm install
 script:
-  - npm test
+    - npm test
