@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 4567;
 
 app.listen(
     PORT,
-    console.log(`Server started in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)
+    //console.log(`Server started in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)
 );
 
 module.exports = app;
