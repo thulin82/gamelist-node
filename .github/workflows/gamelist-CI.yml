@@ -28,6 +28,6 @@ jobs:
             - name: Test Report
               uses: dorny/test-reporter@v1
               with:
-                  name: Unit Tests
+                  name: unit tests ${{ matrix.node-version }}
                   path: test-results.json
                   reporter: mocha-json
