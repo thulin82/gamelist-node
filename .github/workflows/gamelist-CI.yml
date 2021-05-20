@@ -24,3 +24,4 @@ jobs:
             - run: npm test
               env:
                   NODE_ENV: ${{secrets.NODE_ENV}}
+                  MONGODB_URI: ${{secrets.MONGODB_URI}}
