@@ -25,3 +25,9 @@ jobs:
               env:
                   NODE_ENV: ${{secrets.NODE_ENV}}
                   MONGODB_URI: ${{secrets.MONGODB_URI}}
+            - name: Test Report
+              uses: dorny/test-report@v1
+              with:
+                  name: Unit Tests
+                  path: test-results.json
+                  reporter: mocha-json
