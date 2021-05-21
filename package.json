@@ -6,7 +6,7 @@
     "scripts": {
         "start": "NODE_ENV=production node server",
         "dev": "npx nodemon server",
-        "test": "nyc --reporter=clover mocha --reporter json > test-results.json --exit --recursive tests",
+        "test": "mocha --reporter json > test-results.json --exit --recursive tests",
         "test_console": "mocha --exit --recursive tests"
     },
     "repository": {
@@ -24,8 +24,7 @@
         "express": "^4.17.0",
         "howlongtobeat": "^1.3.0",
         "mocha": "^7.2.0",
-        "mongoose": "^5.11.0",
-        "nyc": "^15.1.0"
+        "mongoose": "^5.11.0"
     },
     "devDependencies": {
         "eslint": "^7.26.0",

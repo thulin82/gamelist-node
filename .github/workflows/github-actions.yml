@@ -1,4 +1,4 @@
-name: Gamelist CI
+name: GitHub Actions
 
 on:
     push:
@@ -28,6 +28,6 @@ jobs:
             - name: Test Report
               uses: dorny/test-reporter@v1
               with:
-                  name: unit tests ${{ matrix.node-version }}
+                  name: unit tests (${{ matrix.node-version }})
                   path: test-results.json
                   reporter: mocha-json
