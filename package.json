@@ -6,8 +6,8 @@
     "scripts": {
         "start": "NODE_ENV=production node server",
         "dev": "npx nodemon server",
-        "test": "mocha --reporter json > test-results.json --exit --recursive tests",
-        "test_console": "mocha --exit --recursive tests"
+        "test": "mocha --reporter json > test-results.json --exit --recursive --timeout 10000 tests",
+        "test_console": "mocha --exit --recursive --timeout 10000 tests"
     },
     "repository": {
         "type": "git",
@@ -22,12 +22,12 @@
         "cors": "^2.8.0",
         "dotenv": "^16.0.0",
         "express": "^4.18.0",
-        "howlongtobeat": "^1.5.0",
-        "mocha": "^9.2.0",
-        "mongoose": "^5.11.0"
+        "howlongtobeat": "^1.7.0",
+        "mocha": "^10.2.0",
+        "mongoose": "^5.13.0"
     },
     "devDependencies": {
-        "eslint": "^8.20.0",
+        "eslint": "^8.33.0",
         "nodemon": "^2.0.0"
     }
 }
