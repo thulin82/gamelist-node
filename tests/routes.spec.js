@@ -8,25 +8,8 @@ var should = require('chai').should();
 
 testCase('Routes', () => {
     after(() => server.close());
-
-    it('GET /games/:id should return json', (done) => {
-        server.get('/api/v1/games/21262')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res.type).to.eql('application/json');
-                done();
-            });
-    });
-    it('GET /games/find/:name should return json', (done) => {
-        server.get('/api/v1/games/find/bloodborne')
-            .end((err, res) => {
-                expect(res).to.have.status(200);
-                expect(res.type).to.eql('application/json');
-                done();
-            });
-    });
-    it('GET /games/findone/:name should return json', (done) => {
-        server.get('/api/v1/games/findone/bloodborne')
+    it('GET /games/search/:name should return json', (done) => {
+        server.get('/api/v1/games/search/bloodborne')
             .end((err, res) => {
                 expect(res).to.have.status(200);
                 expect(res.type).to.eql('application/json');
