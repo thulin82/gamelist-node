@@ -1,7 +1,5 @@
 const express = require('express');
 const dotenv = require('dotenv');
-// eslint-disable-next-line no-unused-vars
-const colors = require('colors');
 const cors = require('cors');
 const connectDB = require('./config/db');
 
@@ -21,9 +19,6 @@ app.use('/api/v1/db', db);
 
 const PORT = process.env.PORT || 4567;
 
-app.listen(
-    PORT,
-    //console.log(`Server started in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold)
-);
+app.listen(PORT);
 
 module.exports = app;
