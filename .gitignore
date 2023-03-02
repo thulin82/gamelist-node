@@ -3,3 +3,4 @@ npm-debug.log
 .vscode
 config/config.env
 test-results.json
+uploads
