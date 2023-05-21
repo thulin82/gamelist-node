@@ -2,7 +2,7 @@
 
 [![GitHub Actions](https://github.com/thulin82/gamelist/actions/workflows/github-actions.yml/badge.svg)](https://github.com/thulin82/gamelist/actions/workflows/github-actions.yml)
 
-Small express api to use with howlongtobeat npm module
+Small express api to use with howlongtobeat.com
 
 ## Setup
 
