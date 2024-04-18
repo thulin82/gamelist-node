@@ -1,6 +1,6 @@
-# [GameList](https://github.com/thulin82/gamelist)
+# [GameList](https://github.com/thulin82/gamelist-node)
 
-[![GitHub Actions](https://github.com/thulin82/gamelist/actions/workflows/github-actions.yml/badge.svg)](https://github.com/thulin82/gamelist/actions/workflows/github-actions.yml)
+[![GitHub Actions](https://github.com/thulin82/gamelist-node/actions/workflows/github-actions.yml/badge.svg)](https://github.com/thulin82/gamelist/actions/workflows/github-actions.yml)
 
 Small express api to use with howlongtobeat.com
 
@@ -9,7 +9,7 @@ Small express api to use with howlongtobeat.com
 ### Get project
 
 ```
-$ git clone git@github.com:thulin82/gamelist.git
+$ git clone git@github.com:thulin82/gamelist-node.git
 ```
 
 ### Get dependencies

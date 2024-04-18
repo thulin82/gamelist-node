@@ -1,5 +1,5 @@
 {
-    "name": "gamelist",
+    "name": "gamelist-node",
     "version": "1.0.0",
     "description": "Using howtolongtobeat.com together with gamelist from psn",
     "main": "server.js",
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git@github.com:thulin82/gamelist.git"
+        "url": "git@github.com:thulin82/gamelist-node.git"
     },
     "engines": {
         "node": ">=18.0.0"
@@ -23,14 +23,14 @@
         "chai-http": "^4.4.0",
         "cors": "^2.8.0",
         "csvtojson": "^2.0.10",
-        "dotenv": "^16.3.0",
-        "express": "^4.18.0",
-        "mocha": "^10.2.0",
+        "dotenv": "^16.4.0",
+        "express": "^4.19.0",
+        "mocha": "^10.4.0",
         "mongoose": "^7.6.0",
         "multer": "^1.4.5-lts.1"
     },
     "devDependencies": {
         "eslint": "^8.51.0",
-        "nodemon": "^3.0.0"
+        "nodemon": "^3.1.0"
     }
 }
